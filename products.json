@@ -1,0 +1,6 @@
+{
+  "products": [],
+  "check_interval_seconds": 1800,
+  "open_checkout_on_hit": true,
+  "checkout_method": "selenium"
+}
