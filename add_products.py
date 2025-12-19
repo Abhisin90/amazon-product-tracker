@@ -31,9 +31,6 @@ def remove_product():
         data = json.load(f)
     
     data["products"] = [product for product in data["products"] if product.get("name") != product_name]
-    print(data["products"][0]["name"])
-    print(product_name)
-    print(data)
 
     with open("products.json", "w") as f:
         json.dump(data, f, indent=2)

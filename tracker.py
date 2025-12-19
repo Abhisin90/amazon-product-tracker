@@ -45,65 +45,25 @@ def get_headless_driver():
     return driver
 
 def parse_price_and_stock(driver, url):
-    """
-    Returns (price_float, in_stock_bool)
-    price_float is None if not found.
-    in_stock_bool is True if stock detected or strictly not "unavailable".
-    """
     try:
         driver.get(url)
-        # Give it a moment to render JS
-        time.sleep(3) 
+        time.sleep(3)
+        soup = BeautifulSoup(driver.page_source, "html.parser")
         
-        html = driver.page_source
-        soup = BeautifulSoup(html, "html.parser")
+        # Price
+        price_text = next((el.get_text(strip=True) for sel in [".a-price .a-offscreen", "#priceblock_dealprice", "#priceblock_ourprice", "#priceblock_saleprice", ".a-color-price"] if (el := soup.select_one(sel))), None)
+        if not price_text and (m := re.search(r"₹\s?[\d,]+(?:\.\d+)?", soup.get_text())): price_text = m.group(0)
+        price = float(re.sub(r"[^\d.]", "", price_text)) if price_text else None
 
-        # 1. Parse Price
-        selectors = [
-            ".a-price .a-offscreen",
-            "#priceblock_dealprice",
-            "#priceblock_ourprice",
-            "#priceblock_saleprice",
-            ".a-color-price"
-        ]
-        price_text = None
-        for sel in selectors:
-            el = soup.select_one(sel)
-            if el and el.get_text(strip=True):
-                price_text = el.get_text(strip=True)
-                break
+        # Stock - Robust Check
+        # 1. Check for buttons
+        has_buttons = soup.select_one("#add-to-cart-button") or soup.select_one("#buy-now-button")
+        # 2. Check availability text container
+        avail = soup.select_one("#availability")
+        avail_text = avail.get_text().lower() if avail else ""
+        is_out = "currently unavailable" in avail_text or "temporarily out of stock" in avail_text
         
-        # Fallback regex
-        if not price_text:
-            text = soup.get_text()
-            # Look for ₹ followed by numbers
-            m = re.search(r"₹\s?[\d,]+(?:\.\d+)?", text)
-            if m:
-                price_text = m.group(0)
-
-        price = None
-        if price_text:
-            cleaned = re.sub(r"[^\d.]", "", price_text)
-            try:
-                price = float(cleaned)
-            except:
-                price = None
-        
-        # 2. Parse Stock
-        # "Currently unavailable" is a strong signal for NO stock.
-        # "In stock" or "Only X left" is YES.
-        
-        text_lower = soup.get_text().lower()
-        if "currently unavailable" in text_lower:
-            in_stock = False
-        else:
-            # Default to True if we found a price, unless specific out-of-stock markers appear
-            # Some pages show price but "Temporary out of stock"
-            if "temporarily out of stock" in text_lower:
-                in_stock = False
-            else:
-                in_stock = True
-                
+        in_stock = bool(has_buttons and not is_out)
         return price, in_stock
 
     except Exception as e:
@@ -156,8 +116,7 @@ def run_tracker(single_run=False):
                     print(f"Error reloading config: {e}")
             
             products = prod_cfg.get("products", [])
-            if not products:
-                 print(f"[{datetime.now():%H:%M:%S}] No products found config.")
+            if not products: print(f"[{datetime.now():%H:%M:%S}] No products found in config."); time.sleep(5)
             # Always email for now or check os.environ?
             # Let's keep it simple fixed to email since we are hardcoding notify_cfg above
             method = notify_cfg.get("notification_method", "email")
