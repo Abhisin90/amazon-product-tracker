@@ -19,6 +19,11 @@
       "name": "macbook air m4 starlight",
       "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDD63FH/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
       "threshold_inr": "95000"
+    },
+    {
+      "name": "test",
+      "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDD63FH/ref=sr_1_4?crid=1TV1S1VFLF9OG&dib=eyJ2IjoiMSJ9.rPvZxx0DnMagOliaoaBh3EZXMZ88cSIV1tP5otlINo045YJeQf1oW1UA9d23fOFhLR3PwUCsuzaiyXOc0lewONiZIJ_p4FGsnvpKN93SEjIgU6RWfQrl5ZZvvO0Q9OQVpnFTqsCCPb4IlL2KiCMdeBwbj-Z9XUPHN-NeliIj9kSjNfZkIChUTClBbbGD5rZRnZV1iHJoVf4R29X79zzL3sdFjWJ2Su8CK_mmhWzcNus.mG5jTQZA0c9b3YHypyyKOXQlTBOdEnKlSa1k4VVjGoc&dib_tag=se&keywords=macbook%2Bair%2Bm4%2B512gb&qid=1766135645&sprefix=macbook%2Bair%2B%2Caps%2C222&sr=8-4&th=1",
+      "threshold_inr": "115000"
     }
   ],
   "check_interval_seconds": 1800,
