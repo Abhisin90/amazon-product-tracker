@@ -12,6 +12,7 @@ load_dotenv()
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from price_utils import extract_price
 
 import smtplib
 from email.mime.text import MIMEText
@@ -51,8 +52,7 @@ def parse_price_and_stock(driver, url):
         soup = BeautifulSoup(driver.page_source, "html.parser")
         
         # Price
-        price_text = next((el.get_text(strip=True) for sel in [".a-price .a-offscreen", "#priceblock_dealprice", "#priceblock_ourprice", "#priceblock_saleprice", ".a-color-price"] if (el := soup.select_one(sel))), None)
-        if not price_text and (m := re.search(r"₹\s?[\d,]+(?:\.\d+)?", soup.get_text())): price_text = m.group(0)
+        price_text = extract_price(soup)
         price = float(re.sub(r"[^\d.]", "", price_text)) if price_text else None
 
         # Stock - Robust Check
