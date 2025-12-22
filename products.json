@@ -19,6 +19,26 @@
       "name": "macbook air m4 starlight",
       "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDD63FH/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
       "threshold_inr": "95000"
+    },
+    {
+      "name": "macbook air m4 midnight",
+      "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZD8QJBH/ref=pd_ci_mcx_mh_mcx_views_0_image?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
+      "threshold_inr": "99000"
+    },
+    {
+      "name": "macbook air m4 silver",
+      "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDGKGN7/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
+      "threshold_inr": "99000"
+    },
+    {
+      "name": "macbook air m4 sky blue",
+      "url": "http://amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDDKTQZ/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
+      "threshold_inr": "99000"
+    },
+    {
+      "name": "macbook air m4 starlight",
+      "url": "https://www.amazon.in/Apple-MacBook-13-inch-10-core-Unified/dp/B0DZDD63FH/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=H27YT&content-id=amzn1.sym.04d3fdac-1b15-414f-91d2-0c9aaaf137d6%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=04d3fdac-1b15-414f-91d2-0c9aaaf137d6&pf_rd_r=SW5BQN3WD4WKXYSJ67N2&pd_rd_wg=D8D7c&pd_rd_r=e86956ba-4751-41dc-a579-fd603b9358e6&pd_rd_i=B0DZD8QJBH&th=1",
+      "threshold_inr": "99000"
     }
   ],
   "check_interval_seconds": 1800,
